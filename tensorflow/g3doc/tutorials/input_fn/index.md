@@ -357,7 +357,7 @@ Finally, you can use the model to predict median house values for the
 ```python
 y = regressor.predict(input_fn=lambda: input_fn(prediction_set))
 # .predict() returns an iterator; convert to a list and print predictions
-predictions = list(itertools.islice(y, 6))
+predictions = [p for p in y]
 print ("Predictions: {}".format(str(predictions)))
 ```
 
